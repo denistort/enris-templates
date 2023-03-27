@@ -66,3 +66,10 @@ templater.addPipe(
 ```typescript
 templater.render("index", dataSecond);
 ```
+
+6. **Caching**. Enris supports a caching
+
+```typescript
+//You can disable cache
+const templater = new EnrisTemplates({ cache: false });
+```
