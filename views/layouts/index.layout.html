@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ @include $head }}
+<body>
+
+	{{ #if ($variable.length > 0) }}
+		<div>Hello i am in the body of if statement</div>
+	{{ #endif }}
+
+	{{ #for (element in array) }}
+		<div>{{ element }}</div>
+	{{ #endfor }}
+
+	{{ @include $wewe }}
+	<h1>{{ $variable }}</h1>
+	<h1>{{ @pipe.toUpperCase|toLowerCase|toUpperCase|toFirstUpper -> $variable }} = FirstUpper</h1>
+	<h1>{{ @pipe.toUpperCase -> $variable }} = UpperCase Text</h1>
+
+	<h1>{{ $object.wewe }}</h1>
+	{{ @include $footer }}
+</body>
+</html>
